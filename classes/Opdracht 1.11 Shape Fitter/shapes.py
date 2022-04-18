@@ -1,9 +1,9 @@
 class Rectangle:
   pass
 
-class Square(Rectangle):
+class Square():
    pass
 
-class Diamond(Rectangle):
+class Diamond():
     pass
 

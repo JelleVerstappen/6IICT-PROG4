@@ -9,6 +9,10 @@ Om dit programma te schrijven kunnen jullie best volgende volgorde gebruiken:
 8) implementeer insertion_sort
 9) implementeer bozo_sort
 
+EXTRA:
+10) implementeer vergelijk_algoritmes.py
+11) Zorg ervoor dat je de lijsten zowel opwaards als neerwaards kan sorteren.
+
 Algemene tip: Probeer het programma te maken in dezelfde volgorde als de main()
               
 Algemene tip: Gebruik ctrl + / om geselecteerde lijnen in/uit commentaar te zetten

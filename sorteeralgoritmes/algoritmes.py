@@ -47,7 +47,9 @@ def bozo_sort(lijst):
     while shuffled != sorted(lijst):
         shuffled = random.shuffle(lijst)
 
-        yield 0, 0
+        yield -2, -2
+
+
 
 
 

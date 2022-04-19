@@ -75,7 +75,7 @@ def teken_scherm_statisch(display_info, kleur, font): # Vul input aan OBV onders
     instructies = font.FONT_NORMAAL.render("R - reset | SPATIE - start", True, kleur.ZWART)
     display_info.display.blit(instructies, (display_info.breedte/2-instructies.get_width()/2, 5))
 
-    algoritmes = font.FONT_NORMAAL.render("I - insertion | B- bubble | Z - bozo", True, kleur.ZWART)
+    algoritmes = font.FONT_NORMAAL.render("I - insertion | B- bubble | Z - bozo | M -Merge", True, kleur.ZWART)
     display_info.display.blit(algoritmes, (display_info.breedte/2-algoritmes.get_width()/2, 35))
 
 # Functie om het huidig geactiveerde algoritme te tekenen
@@ -199,6 +199,9 @@ def main():
                 if event.key == pygame.K_z:
                     teken_actief_algoritme(display_info, kleur, "Bozo sort", font)
                     actief_algoritme = a.bozo_sort
+                if event.key == pygame.K_m:
+                    teken_actief_algoritme(display_info, kleur, "Merge sort", font)
+                    actief_algoritme = a.merge_sort
     # Stop pygame als de "QUIT" toets is ingeduwd.
     pygame.quit()
 

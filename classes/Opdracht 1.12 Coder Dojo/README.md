@@ -8,7 +8,7 @@ You're starting your own coder dojo! Everybody at
 Codebar - whether they are attending workshops or teaching them - is
 a Member and should be initialised with a `full name`. Which in the class is split into the properties `first name` and `last name` The class should contain the following methods:
 * `introduce()`: returns a string with an introduction  (e.g., "Hi, my name is Marc!").
-* `description()`: returns a string with the reason or bio (see ahead) (e.g., "I've always wanted to make websites"). This function should return without any value.
+* `description()`:  This function should return without any value (will be used in Instructor and Student classes).
 
 ### Student and Instructor class
 

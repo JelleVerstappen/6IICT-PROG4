@@ -1,6 +1,6 @@
 ## Assignment
 Complete the `Member`, `Student`, `Instructor` and `Workshop` classes in `dojo.py`.
-In this project you will use object oriented programming to create a Rectangle class and a Square class. The Square class should be a child of Rectangle and inherit methods and property.
+In this project you will use object oriented programming to create a Member, Student, Instructor and Workshop class . The Student and Instructor class should be a child of Member and inherit methods and property.
 
 ### Member class
 

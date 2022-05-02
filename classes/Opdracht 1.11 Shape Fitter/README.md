@@ -165,7 +165,7 @@ Diamond(width=5, height=9)
 37.36308338453881
 22.5
 Method deprecated through definition of width and height
-9.340770846134703
+5.1478150704935
 4
   *
   *

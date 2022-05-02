@@ -14,7 +14,7 @@ towers_of_hanoi(5,'A','C','B')
 ```
 
 <p align="center">
-  <img src="../images/outside_function_example.png" width="400" height="200"/>
+  <img src="../Images/outside_function_example.png" width="400" height="200"/>
 </p>
 
 Example inside-function call
@@ -22,7 +22,7 @@ Example inside-function call
 towers_of_hanoi(3,'A','C','B')
 ```
 <p align="center">
-  <img src="../images/inside_function_call.gif" width="400" height="200"/>
+  <img src="../Images/inside_function_call.gif" width="400" height="200"/>
 </p>
 
 

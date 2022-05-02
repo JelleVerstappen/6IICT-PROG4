@@ -11,7 +11,7 @@ The function should stop drawing rectangles once their width or height is equal 
 The resulting figure should look something like below.
 
 <p align="center">
-  <img src="images/figure_recursive_rectangles.png" width="400" height="200"/>
+  <img src="Images/figure_recursive_rectangles.png" width="400" height="200"/>
 </p>
 
 
@@ -21,7 +21,7 @@ The resulting figure should look something like below.
 A fractal is a geometrical figure, where each part has the same statistical character as the whole. In layman's terms, they are useful in modelling structures in which similar patterns recur at progressively smaller scales (see snowflake for an example).
 
 <p align="center">
-  <img src="images/snowflake_rectangle.png" width="200" height="200"/>
+  <img src="Images/snowflake_rectangle.png" width="200" height="200"/>
 </p>
 
 Fractals are best programmed recursively. For this we will be using pygame. Complete the `recursive_fractal` function in `Opdracht 2.4 Fractals`. It will be used in the `main` function (which is already completed) to draw fractals with a certain "depth". Depending on the depth used in `main` the fractal will expand. Below figures show the resulting fractal when `recursive_fractal` is called with a respective depth of 1, 2 and 3.
@@ -40,9 +40,9 @@ recursive_fractal(0, 0, width, height, fractal_depth, screen)
 ```
 
 <p float="center" align="center">
-  <img src="images/fractal_1.png" width="200" />
-  <img src="images/fractal_2.png" width="200" /> 
-  <img src="images/fractal_3.png" width="200" />
+  <img src="Images/fractal_1.png" width="200" />
+  <img src="Images/fractal_2.png" width="200" /> 
+  <img src="Images/fractal_3.png" width="200" />
 </p>
 
 `Opdracht 2.4 Fractals` already contains a `draw_shape` function (is completed). Calling it will draw the above `H-shape` at a certain x- and y-co, with a certain width and height, on the screen.

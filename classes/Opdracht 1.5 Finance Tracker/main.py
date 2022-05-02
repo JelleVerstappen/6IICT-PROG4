@@ -2,3 +2,4 @@
 # For instructions read the README.md
 import finance
 from finance import create_spend_chart
+

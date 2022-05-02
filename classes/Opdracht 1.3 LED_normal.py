@@ -9,19 +9,34 @@ GPIO.setup(13,GPIO.OUT)
 GPIO.setup(12, GPIO.OUT)
 GPIO.setup(5, GPIO.OUT)
 
+
+class LED():
+    def __init__(self, led):
+      self.led = led
+      GPIO.setup(self.led, GPIO.OUT)
+      
+      
+    def on(self):
+      GPIO.output(self.led, GPIO.HIGH)
+      
+    def off(self):
+      GPIO.output(self.led, GPIO.LOW)
+      
 while True:
-    print("Red on, Green off")
-    GPIO.output(26,GPIO.HIGH)
-    GPIO.output(13,GPIO.LOW)
-    GPIO.output(12 ,GPIO.HIGH)
-    GPIO.output(5 ,GPIO.LOW)
-
+    LED16 = LED(16)
+    LED15 = LED(15)
+    LED14 = LED(14)
+    LED13 = LED(13)
+    
+    print("even on, odd off")
+    LED16.on()
+    LED14.on()
+    LED15.off()
+    LED13.off()
     time.sleep(1)
-
-    print("Red off, Green on")
-    GPIO.output(26,GPIO.LOW)
-    GPIO.output(13,GPIO.HIGH)
-    GPIO.output(12 ,GPIO.LOW)
-    GPIO.output(5 ,GPIO.HIGH)
-
+    print("even off, odd on")
+    LED16.off()
+    LED14.off()
+    LED15.on()
+    LED13.on()
     time.sleep(1)

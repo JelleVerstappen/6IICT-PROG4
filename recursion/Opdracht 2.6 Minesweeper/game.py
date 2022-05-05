@@ -20,6 +20,8 @@ class Game():
                 break
 
 """
+This will be executed when running the game.py file
+
 Game settings, to be passed on to Board through Game.
     CHAR_MINE: Character to be used when displaying mines (default *)
     CHAR_BLANK: Character to be used when displaying blanks (default ?)

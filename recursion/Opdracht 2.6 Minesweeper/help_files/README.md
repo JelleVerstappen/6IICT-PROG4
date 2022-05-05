@@ -1,5 +1,5 @@
 # READ BEFORE CONTINUING
-The files in this folder contain help for possible ways to solve this exercise. Use these only when you get stuck on certain parts. They do not give full solutions, but rather tips about how you could go about implementing the code. In programming there is usually not just one way to go about things. So if your solution does not match the help in these files, that does not necessarily mean the solution is wrong.
+The files in this folder contain possible ways to solve this exercise. Use them only when you get stuck on certain parts. They do not give full solutions, but rather tips about how you could go about implementing the code. In programming there is usually not just one way to go about things. So if your solution does not match what is given in these files, that does not necessarily mean the solution is wrong.
 
 # Assignment
 For this exercise you will be making the game Minesweeper in your terminal. This assignment is a combination of OOP with a bit of recursion. The explanation for each file can be found below.

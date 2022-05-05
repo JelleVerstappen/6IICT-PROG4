@@ -119,7 +119,7 @@ The neighbouring mines for the above example is:
 After completing the display methods it is time to work on the logic of the board. For this we will be implementing the `cascade()` method that accepts a row and column number, indicating a certain cell in the *grid*. This method will change the *is_covered* properties of a number of cells in the grid to False. In Minesweeper this works as follows. When you select a cell with 0 neighbouring mines it will uncover that cell. Additionally, it will automatically open adjacent cells in all 8 directions until reaching a cell that does have a mine neighbouring it. See below gif for a visual on this rule (In the gif empty cells have 0 neighbouring mines.
 
 <p align="center">
-  <img src="Images/working_minesweeper_gif.gif" width="200" height="400"/>
+  <img src="Images/working_minesweeper_gif.gif" width="200" height="350"/>
 </p>
 
 This cascading can be implemented using recursion. However, we will first implement a simpler version. After completing this simple version you should first finish the contents of *game.py*, before returning and implementing this method properly.

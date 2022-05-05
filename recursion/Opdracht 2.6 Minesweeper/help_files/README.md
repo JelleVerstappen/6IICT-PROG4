@@ -130,7 +130,7 @@ This cascading can be implemented using recursion. However, we will first implem
 For the simple version, set the *is_covered* property for the cell with the given row and column number on the *grid* to False. This means that only the selected cell is uncovered. Below gif shows how it would work in our implementation of Minesweeper (The input of row and column will happen in a different method).
 
 <p align="center">
-  <img src="Images/simple_cascade_gif.gif" width="200" height="250"/>
+  <img src="../Images/simple_cascade_gif.gif" width="200" height="250"/>
 </p>
 
 As mentioned above, the proper version of the `cascade()` method uses recursion. The recursive method is more complicated than those in previous exercises. The reason for this is that there isn't just one base case. Before trying the method think about following situations. When should the recursion take place and how many times should cascade be recursively called?

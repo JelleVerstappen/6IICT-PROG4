@@ -28,7 +28,7 @@ Besides these five properties, when creating an object of the class Board. The f
 
 For example a 3x3 grid containing two bombs would have the following cells (row,column):
 <p align="center">
-  <img src="Images/neighbours.png" width="200" height="200"/>
+  <img src="../Images/neighbours.png" width="200" height="200"/>
 </p>
 
 The class has several additional methods. First we will go over those that display the grid in the terminal. After completing each display method, check them by running a number of tests yourself. Using these display methods, you can also determine if all methods and properties were implemented correctly.
@@ -122,7 +122,7 @@ The neighbouring mines for the above example is:
 After completing the display methods it is time to work on the logic of the board. For this we will be implementing the `cascade()` method that accepts a row and column number, indicating a certain cell in the *grid*. This method will change the *is_covered* properties of a number of cells in the grid to False. In Minesweeper this works as follows. When you select a cell with 0 neighbouring mines it will uncover that cell. Additionally, it will automatically open adjacent cells in all 8 directions until reaching a cell that does have a mine neighbouring it. See below gif for a visual on this rule (In the gif empty cells have 0 neighbouring mines.
 
 <p align="center">
-  <img src="Images/working_minesweeper_gif.gif" width="200" height="400"/>
+  <img src="../Images/working_minesweeper_gif.gif" width="200" height="400"/>
 </p>
 
 This cascading can be implemented using recursion. However, we will first implement a simpler version. After completing this simple version you should first finish the contents of *game.py*, before returning and implementing this method properly.
@@ -144,7 +144,7 @@ In order to win the game, the program needs to know when there are no longer any
 Below gif shows the proper implementation of the `cascade()` method.
 
 <p align="center">
-  <img src="Images/proper_cascade_gif.gif" width="200" height="250"/>
+  <img src="../Images/proper_cascade_gif.gif" width="200" height="250"/>
 </p>
 
 ## game.py

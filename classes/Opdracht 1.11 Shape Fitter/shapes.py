@@ -8,9 +8,8 @@ class Rectangle():
     self.width = width
     self.height = height
 
-
- 
-
+  def __repr__(self) -> str:
+    return f'Rectangle(width={self.width}, height= {self.height})\n'
   def set_width(self, amount):
     self.width = amount
     return self.width

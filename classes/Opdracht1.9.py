@@ -13,7 +13,7 @@ class Rectangle:
 
 
 class Square(Rectangle):
-    def set_width(self):
-        self.width = 5
-    def set_height(self):
-        self.height = 5
+    def set_width(self, amount):
+        self.width = amount
+    def set_height(self, amount):
+        self.height = amount

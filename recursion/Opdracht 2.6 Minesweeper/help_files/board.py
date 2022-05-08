@@ -36,7 +36,7 @@ class Board():
         
 
     
-    """  Clears all mines that are adjacent to a given until a cell containing a mine is encountered. """
+    """  Clears all cells that are adjacent to a given cell until a cell neighbouring a mine is encountered. """
     def cascade(self, row, column):
         # You will need to implement the simple cascade by yourself.
 

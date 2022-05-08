@@ -1,5 +1,4 @@
 import pygame, time
-from visualise_hanoi import *
 
 """
 Recursive function to solve towers of Hanoi
@@ -12,7 +11,8 @@ Driver code
 """
 n_disks = 3
 
-# To be used when visualising
+# # To be used when visualising
+# from visualise_hanoi import *
 # make_disks(n_disks)
 # update_visuals()
 # time.sleep(2)

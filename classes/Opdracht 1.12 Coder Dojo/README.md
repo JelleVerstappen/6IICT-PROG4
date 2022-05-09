@@ -1,6 +1,6 @@
 ## Assignment
 Complete the `Member`, `Student`, `Instructor` and `Workshop` classes in `dojo.py`.
-In this project you will use object oriented programming to create a Rectangle class and a Square class. The Square class should be a child of Rectangle and inherit methods and property.
+In this project you will use object oriented programming to create a Member, Student, Instructor and Workshop class . The Student and Instructor class should be a child of Member and inherit methods and property.
 
 ### Member class
 
@@ -8,7 +8,7 @@ You're starting your own coder dojo! Everybody at
 Codebar - whether they are attending workshops or teaching them - is
 a Member and should be initialised with a `full name`. Which in the class is split into the properties `first name` and `last name` The class should contain the following methods:
 * `introduce()`: returns a string with an introduction  (e.g., "Hi, my name is Marc!").
-* `description()`: returns a string with the reason or bio (see ahead) (e.g., "I've always wanted to make websites"). This function should return without any value.
+* `description()`:  This function should return without any value (will be used in Instructor and Student classes).
 
 ### Student and Instructor class
 

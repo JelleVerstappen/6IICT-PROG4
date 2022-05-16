@@ -1,9 +1,9 @@
 from datetime import datetime
 
 class Grouping:
-    def __init__(self, name):
+    def __init__(self, name, ledger=[]):
         self.name = name
-        self.ledger = []
+        self.ledger = ledger
         self.balance = 0.0
 
     def __repr__(self):
@@ -33,7 +33,7 @@ class Grouping:
 
     def transfer(self, amount, category_instance):
         if self.withdraw(amount, f"To {category_instance.name}, {datetime.now()}"):
-            category_instance.deposit(amount,  f"From {category_instance.name}, {datetime.now()}")
+            category_instance.deposit(amount,  f"From {self.name}, {datetime.now()}")
             return True
         else:
             return False

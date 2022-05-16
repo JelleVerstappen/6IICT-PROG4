@@ -5,8 +5,10 @@ BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
  
 """ Recursive fractal function """
-def recursive_fractal(x, y, width, height, count, screen):
-    pass
+def recursive_fractal(0, 0, width, height, fractal_depth, screen):
+    if fractal_depth == 0:
+        return 
+    
  
 """ Draw shape based on wanted position (x,y) and size (width, height) """
 def draw_shape(x,y,width,height, screen):

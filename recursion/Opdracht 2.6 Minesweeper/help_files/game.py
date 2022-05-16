@@ -1,13 +1,13 @@
 from board import Board
 
-"""Disclaimer: Methods are in alphabetical order."""
+"Disclaimer: Methods are in alphabetical order."
 class Game():
     # TODO: Add the correct parameters to the init() method.
     def __init__():
         # Properties of game object are set.
         self.board = Board(CHAR_MINE, CHAR_BLANK, SQUARE_SIZE, MINE_NUMBER)
 
-        """Game loop of Minesweeper (already completed) """
+    "Game loop of Minesweeper (already completed) "
     def game_loop(self):
         self.board.display_mines_grid()
         self.board.display_neighbouring_mines_grid()
@@ -24,7 +24,7 @@ class Game():
                 self.board.display_mines()
                 break
 
-    """ Get the choice of the user """
+    " Get the choice of the user "
     def get_user_choice(self):
         # Use while True loop to run code until a valid input is given.
         # If input is not valid, continue to next iteration of while.
@@ -40,7 +40,7 @@ class Game():
                 return row,col
 
 
-    """ Make a move on the board """
+    " Make a move on the board "
     def make_move(self):
         # Get input from user using the below line.
         row, col = self.get_user_choice()

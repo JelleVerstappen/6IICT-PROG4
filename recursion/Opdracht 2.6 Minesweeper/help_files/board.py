@@ -1,7 +1,7 @@
 from cell import Cell
 from random import randint
 
-"""Disclaimer: Methods are in alphabetical order."""
+"Disclaimer: Methods are in alphabetical order."
 class Board():
     # Certain parameters and properties are given.
     # TODO: Add the remaining parameters and properties.
@@ -19,7 +19,7 @@ class Board():
         #       How are we going to run through all the cells in the entire grid?
         self.generate_mines(MINE_NUMBER)
     
-    """ Calculates the number of mines adjacent to a cell """
+    " Calculates the number of mines adjacent to a cell "
     def calculate_neighbouring_mines(self, row, column):  
         # You can get a cell out of the grid as follows
         cell = self.grid[row][column]
@@ -36,7 +36,7 @@ class Board():
         
 
     
-    """  Clears all cells that are adjacent to a given cell until a cell neighbouring a mine is encountered. """
+    "  Clears all cells that are adjacent to a given cell until a cell neighbouring a mine is encountered. "
     def cascade(self, row, column):
         # You will need to implement the simple cascade by yourself.
 
@@ -56,7 +56,7 @@ class Board():
         #       Tip:    When recursion takes place, cascade() should be called 8 times.
         #               Once per (possible) neighbour the cell has.
 
-    """ Places mines at random cell positions in the entire grid list """
+    " Places mines at random cell positions in the entire grid list "
     def generate_mines(self, MINE_NUMBER):
     # We will need to place a number of mines. A for-loop works great for this.
     # However, we only want to go to the next iteration of the for loop after 
@@ -68,7 +68,7 @@ class Board():
         for _ in range(MINE_NUMBER):
             while ...
 
-    """ Template for header of board states """
+    " Template for header of board states "
     def display_header(self, message):
         # We already centered a message in the finance app - exercise. Go check there.
         # TODO: The other part of the message consists of two rows. The length depends
@@ -76,7 +76,7 @@ class Board():
         #       After completing each row. Add below code to go to the next row.
         header += f"\n"
 
-    """ Show grid whilst playing the game """
+    " Show grid whilst playing the game "
     def display_play_grid(self):
         # Get the header from the display_header() method.
         header = self.display_header("LET'S PLAY")
@@ -90,10 +90,10 @@ class Board():
 
         print(header + body)
 
-    """ Show grid with locations of mines revealed """
+    " Show grid with locations of mines revealed "
     def display_mines_grid(self):
         # Use the same strategy as given in display_play_grid()
 
-    """ Show grid with number of neighbouring mines revealed """
+    " Show grid with number of neighbouring mines revealed "
     def display_neighbouring_mines_grid(self):
         # Use the same strategy as given in display_play_grid()

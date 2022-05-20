@@ -5,9 +5,9 @@ Before starting this exercise it is best that you know the basics of Minesweeper
 
 ## cell.py
 In this file you will be making a class for each individual cell. Objects from this class should have three properties:
-* `is_revealed`: Boolean to determine whether the cell has been uncovered. Starts False
-* `display_character`: Character representing the type of cell. (blank or mine).
-* `neighbouring_mine_count`: Number to annotate how many mines there are in the surrounding 8 cell. Starts as 0
+* `is_revealed`: Boolean to determine whether the cell has been uncovered. Starts False.
+* `display_character`: Character representing the type of cell (blank or mine).
+* `neighbouring_mine_count`: Number to annotate how many mines there are in the surrounding 8 cell. Starts as 0.
 
 From the above explanation it should be clear that only the `display_character` is obtained from outside the method (through a parameter).
 

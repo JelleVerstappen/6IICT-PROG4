@@ -18,7 +18,7 @@ A player is eliminated when he is out of cards. The game continues until only on
 </p>
 
 ## Assignment
-You can work on this exercise for the coming four classes (until friday 20/05). On friday there will be a small, individual talk to discuss how your program works and why you made certain decisions. The assignment will not count towards your final grade, you should see it more as a change to experiment with what you have learned.
+You can work on this exercise for the coming four classes (until monday 23/05). On friday there will be a small, individual talk to discuss how your program works and why you made certain decisions. The assignment will not count towards your final grade, you should see it more as a change to experiment with what you have learned.
 
 Before friday the 20th you will need to finish two things:
 * `Class diagram`: In order to properly discuss OOP you will need to develop a UML class diagram. This diagram is built using a couple of guidelines. Making it easy for people to communicate how they envision their OOP project.

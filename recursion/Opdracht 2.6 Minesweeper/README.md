@@ -6,7 +6,7 @@ Before starting this exercise it is best that you know the basics of Minesweeper
 ## cell.py
 In this file you will be making a class for each individual cell. Objects from this class should have three properties:
 * `is_revealed`: Boolean to determine whether the cell has been uncovered. Starts False.
-* `display_character`: Character representing the type of cell (blank or mine).
+* `display_character`: Character representing the type of cell. (blank or mine).
 * `neighbouring_mine_count`: Number to annotate how many mines there are in the surrounding 8 cell. Starts as 0.
 
 From the above explanation it should be clear that only the `display_character` is obtained from outside the method (through a parameter).
@@ -15,21 +15,21 @@ From the above explanation it should be clear that only the `display_character` 
 In this file you will be making a class for the Minesweeper *board*. This will be the largest file. Objects from this class should have five properties:
 * `CHAR_MINE`: Character used to display a mine on the *grid*. It is full caps since it should never be changed. Default value is *.
 * `CHAR_BLANK`: Character used to display a blank on the *grid*. It is full caps since it should never be changed. Default value is ?.
-* `SQUARE_SIZE`: Number to indicate the length and width of the *grid*. The amount of cell in a grid is equal to *SQUARE_SIZE* **2. Default value is 9. 
+* `SQUARE_SIZE`: Number to indicate the length and width of the *grid*. The amount of cells in a grid is equal to *SQUARE_SIZE* **2. Default value is 9. 
 * `covered_cells`: Number to indicate the amount of cell not yet uncovered. Should start of equal to (*SQUARE_SIZE* **2) - *MINE_NUMBER*. *MINE_NUMBER* is a parameter equaling the number of mines the *grid* should contain. The default value for *MINE_NUMBER* is 9.
-* `grid`: 2D-List of cells. The amount of rows and columns are both equal to *SQUARE_SIZE*. Each position should be filled with an object of the class Cell. The display_character for all cells is *CHAR_BLANK*. 
+* `grid`: 2D-List of cells. The amount of rows and columns are both equal to *SQUARE_SIZE*. Each position should be filled with an object of the class Cell. The display_character for all cells starts as *CHAR_BLANK*. 
 
 Besides these five properties, when creating an object of the class Board. The following methods should be called:
-*  A `generate_mines()` method that accepts an amount amount of mines (*MINE_NUMBER*). The method should convert a number of cells from blanks to mines. It does this by changing the display_character of the cell from *CHAR_BLANK* to *CHAR_MINE*. The cell to be changed should be chosen at random. When a randomly selected cell already contains a mine, the method should try again until it finds a cell containing a blank. Once again, the *MINE_NUMBER* should be equal to 9 by default, but can be changed when creating an object of the class Board. This represents how difficult the game will be.
-*  A `calculate_neighbouring_mines()` method that accepts a row and column number. These numbers correspond to a particular cell in the board *grid*. The method calculates how many of it's 8 neighbours contain a bomb (Tip: You will need two for-loops for this). Finally it changes the *neighbouring_mine_count* property of the cell to the amount of neighbouring bombs found (You are allowed to calculate the amount of neighbouring mines a cell, that itself contains a mine, has. This will not influence the future working of the game.) 
+*  A `generate_mines()` method that accepts an amount amount of mines (*MINE_NUMBER*). The method should convert a number of cells from blanks to mines. It does this by changing the display_character of the cell from *CHAR_BLANK* to *CHAR_MINE*. The cells to be changed should be chosen at random. When a randomly selected cell already contains a mine, the method should try again until it finds a cell containing a blank. Once again, the *MINE_NUMBER* should be equal to 9 by default, but can be changed when creating an object of the class Board. This represents how difficult the game will be.
+*  A `calculate_neighbouring_mines()` method that accepts a row and column number. These numbers correspond to a particular cell on the *grid*. The method calculates how many of it's 8 neighbours contain a bomb (Tip: You will need two for-loops for this). Finally it changes the *neighbouring_mine_count* property of the cell to the amount of neighbouring bombs found (you are allowed to calculate the amount of neighbouring mines a for all cells. So also for those containing a mine themselves. This will not influence the future working of the game). 
 
 For example a 3x3 grid containing two bombs would have the following cells (row,column):
 <p align="center">
   <img src="Images/neighbours.png" width="200" height="200"/>
 </p>
 
-The class has several additional methods. First we will go over those that display the grid in the terminal. After completing each display method, check them by running a number of tests yourself. Using these display methods, you can also determine if all methods and properties were implemented correctly.
-* A `display_header()` method that accepts a message. This is a template that will be used in all other display methods. It will return a string containing the header of the display. The header consists of two parts. The first is the message, the second is the column numbering for the *grid*.  
+The class has several additional methods. First we will go over those that display the grid in the terminal. After completing each display method, check them by running a number of tests yourself. Using these display methods, you can also determine if all other methods and properties are implemented correctly.
+* A `display_header()` method that accepts a message as an argument. This is a template that will be used in all other display methods. It will return a string containing the header of the display. The header consists of two parts. The first is the message, the second is the column numbering for the *grid*.  
 
 In general the header will look as follows (assuming *SQUARE_SIZE*=9):
 ```
@@ -38,7 +38,7 @@ In general the header will look as follows (assuming *SQUARE_SIZE*=9):
   ------------------
 ```
 
-The message should be centered in between %, this should be the case no matter what the message written in it is. The total amount of characters on this line should be equal to `2*SQUARE_SIZE+2`. The colom numbering should begin with two spaces. This room is necessary when adding the row numbers (see other display methods).
+The message should be centered in between %, this should be the case no matter what the message written in it is. The total amount of characters on this line should be equal to `2*SQUARE_SIZE+2`. The column numbering should begin with two spaces. This room is necessary for adding the row numbers later on (see other display methods).
 
 Some examples are:
 ```
@@ -119,7 +119,7 @@ The neighbouring mines for the above example is:
 After completing the display methods it is time to work on the logic of the board. For this we will be implementing the `cascade()` method that accepts a row and column number, indicating a certain cell in the *grid*. This method will change the *is_covered* properties of a number of cells in the grid to False. In Minesweeper this works as follows. When you select a cell with 0 neighbouring mines it will uncover that cell. Additionally, it will automatically open adjacent cells in all 8 directions until reaching a cell that does have a mine neighbouring it. See below gif for a visual on this rule (In the gif empty cells have 0 neighbouring mines.
 
 <p align="center">
-  <img src="Images/working_minesweeper_gif.gif" width="200" height="350"/>
+  <img src="Images/working_minesweeper_gif.gif" width="200" height="400"/>
 </p>
 
 This cascading can be implemented using recursion. However, we will first implement a simpler version. After completing this simple version you should first finish the contents of *game.py*, before returning and implementing this method properly.
@@ -130,8 +130,8 @@ For the simple version, set the *is_covered* property for the cell with the give
   <img src="Images/simple_cascade_gif.gif" width="200" height="250"/>
 </p>
 
-As mentioned above, the proper version of the `cascade()` method uses recursion. The recursive method is more complicated than those in previous exercises. The reason for this is that there isn't just one base case. Before trying the method think about following situations. When should the recursion take place and how many times should cascade be recursively called?
-* `cascade()` can be called with a row or column number that is outside of the board (example: row=-1,column=4 || row=3,column=8). 
+As mentioned above, the proper version of the `cascade()` method uses recursion. The recursive method is more complicated than those in previous exercises. The reason for this is that there isn't just one base case. Before implementing the method think about following situations. When should the recursion take place and how many times should cascade be recursively called?
+* `cascade()` is called with a row or column number that is outside of the board (example: row=-1,column=4 || row=3,column=8). 
 * The given row and column number point to a cell with a mine.
 * The given row and column number point to a cell with one or more neighbouring mines.
 * The given row and column number point to a cell with no neighbouring mines.
@@ -153,10 +153,10 @@ Start by creating a class Game. It should have only one property:
 Despite this it will need multiple parameters. Namely those that are required to create an object of Board. By default these parameters should have the same value as those from the `__init__()` of Board.
 
 objects from the Game class will have following methods:
-* A `get_user_choice()` method (see above gifs). The method will ask the player to select a cell by entering a row and column number, seperated by a comma. The function should split these numbers and return them. However, before doing this the method will perform a number of tests. In case one tests fails the program will give an error message and ask again to select a cell. Following needs to be tested:
-    * If the given input is of the proper form: "{number1},{number2}" (Tip: Use an exception!)
+* A `get_user_choice()` method (see above gifs). The method will ask the player to select a cell by entering a row and column number, seperated by a comma. The function should split these numbers and return them seperately. However, before doing this the method will perform a number of tests. In case one tests fails the program will give an error message and ask again to select a cell. Following needs to be tested:
+    * If the given input only contains numbers: "{number1},{number2}" (Tip: This can be done easily using an exception)
     * If the given input fits on the *grid* (so not smaller or larger than the *grid* dimension *SQUARE_SIZE*).
-    * If the given input has not yet been visited.
+    * If the given input has not yet been visited (how do you know which cells have already been visited?) .
 * A `make_move()` method. This method should call `get_user_choice()`, it will then use the obtained row and column number. First it will check whether the cell at this location contains a bomb. If this is the case it will return False. If it does not, it will call the `cascade()` method of the board. Finally it will check whether the board still has *covered_cells* if this is not the case, it will return True.
 * A `game_loop()` method. This method contains the main loop that will execute the game. It has already been implemented.
 

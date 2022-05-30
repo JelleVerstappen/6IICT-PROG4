@@ -28,7 +28,7 @@ For example a 3x3 grid containing two bombs would have the following cells (row,
   <img src="Images/neighbours.png" width="200" height="200"/>
 </p>
 
-The class has several additional methods. First we will go over those that display the grid in the terminal. After completing each display method, check them by running a number of tests yourself. Using these display methods, you can also determine if all other methods and properties are implemented correctly.
+The class has several additional methods. First we will go over those that display the grid in the terminal. You can find these methods in the above file. You can use them to test if all other methods work. Before using these methods first check that the same variable names were used.
 * A `display_header()` method that accepts a message as an argument. This is a template that will be used in all other display methods. It will return a string containing the header of the display. The header consists of two parts. The first is the message, the second is the column numbering for the *grid*.  
 
 In general the header will look as follows (assuming *SQUARE_SIZE*=9):

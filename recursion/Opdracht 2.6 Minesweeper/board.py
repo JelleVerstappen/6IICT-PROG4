@@ -1,15 +1,26 @@
 from cell import Cell
 
 class Board():
-    def __init__(self, SQUARE_SIZE = 9):
-        self.grid = []
+    def __init__(self, CHAR_MINE="*", CHAR_BLANK="?", SQUARE_SIZE=9, MINE_NUMBER=9):
+        self.CHAR_MINE = CHAR_MINE
+        self.CHAR_BLANK = CHAR_BLANK
+        self.SQUARE_SIZE = SQUARE_SIZE
+        self.covered_cells = SQUARE_SIZE**2-MINE_NUMBER
 
-        for i in range(SQUARE_SIZE):
-            row = []
-            for j in range(SQUARE_SIZE):
-                row.append(Cell("?"))
-            self.grid.append(row)
+        self.grid = [[Cell(CHAR_BLANK) for _ in range(SQUARE_SIZE)] 
+                    for _ in range(SQUARE_SIZE)]
 
+    """ Template for header of board states """
+    def display_header(self, message):
+        """ Header of display mines message """
+        header = f"{message.center(self.SQUARE_SIZE*2+2,'%')}\n  "
+        for index in range(self.SQUARE_SIZE):
+            header += f"{index} "
+        header += f"\n  "
+        for index in range(self.SQUARE_SIZE):
+            header += f"--"
+        header += f"\n"
+        return header
 
     """ Show grid whilst playing the game """
     def display_play_grid(self):
@@ -57,4 +68,8 @@ class Board():
                     body += f"{cell.neighbouring_mine_count} "
             body+=f"\n"
         print(header+body)
+
+# Use display methods to check if Minesweepers functions properly
+board = Board()
+
 

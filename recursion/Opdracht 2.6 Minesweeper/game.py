@@ -10,7 +10,12 @@ class Game():
 
     """ Make a move on the board """
     def make_move(self):
-        pass
+        row, col = self.get_user_choice()
+        if self.board.grid[row][col].display_character == self.board.CHAR_MINE:
+            return False
+        self.board.cascade(row,col)
+        if self.board.covered_cells <= 0:
+            return True
 
     """Game loop of Minesweeper """
     def game_loop(self):

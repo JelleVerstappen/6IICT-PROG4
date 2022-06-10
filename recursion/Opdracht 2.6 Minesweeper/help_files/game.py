@@ -1,9 +1,9 @@
 from board import Board
 
 "Disclaimer: Methods are in alphabetical order."
-class Game():
+class Game(Board):
     # TODO: Add the correct parameters to the init() method.
-    def __init__():
+    def __init__(self):
         # Properties of game object are set.
         self.board = Board(CHAR_MINE, CHAR_BLANK, SQUARE_SIZE, MINE_NUMBER)
 

@@ -31,14 +31,14 @@ def insertion_sort(lijst):
             currentPosition = currentPosition - 1
 
             j = currentPosition
+            yield j-1,j-1
 
-            yield j, j-1
+            
         # We have either reached the beginning of the array or we have found
         # an element of the sorted array that is smaller than the element
         # we're trying to insert at index currentPosition - 1.
         # Either way - we insert the element at currentPosition
         lijst[currentPosition] = currentValue
-
 
 # Het bozo_sort algoritme. 
 def bozo_sort(lijst):

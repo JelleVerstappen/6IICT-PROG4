@@ -55,7 +55,7 @@ def main():
         screen.fill(WHITE)
 
         """ Should draw fractals of certain depth as indicated in GitHub """
-        fractal_depth = 10
+        fractal_depth = 5
         recursive_fractal(0, 0, width, height, fractal_depth, screen)
     
         pygame.display.flip()

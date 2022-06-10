@@ -47,6 +47,13 @@ Work on this after creating a blueprint of the class diagram. You are completely
 
 In case you don't know how to create a certain method, write in comments what it is supposed to do. If possible you should also add how you might be able to implement it.
 
+To print the suits of the cards you can use following code:
+```
+print(["\u2660", "\u2663", "\u2665","\u2666"])
+
+['♠', '♣', '♥', '♦']
+```
+
 After completing the base exercise you can expand upon the game in the following ways:
 * Make it possible to choose the amount of players (up to four).
 * Add four Jokers to the game. When revealed, all players must shuffle their decks. It has the highest value in the game (ties are still possible)

@@ -30,13 +30,21 @@ class Game(Board):
         # If input is not valid, continue to next iteration of while.
         # If input is valid use return to exit method.
         # TODO: Add input user and other conditions.
-        while True:
 
+        while True:
+            
+                user_input = int(input("Choose position"))
+                row = user_input[0]
+                col = user_input[1]
+                given_input = []
+                given_input = given_input.append(user_input)
                 # Input numbers too large. 
                 if (row>=self.board.SQUARE_SIZE) or (col>=self.board.SQUARE_SIZE):
                     print(f"{user_input} is invalid, try again")
                     continue
-                elif ...
+                elif user_input in given_input:
+                    print("This coordinate has already been used")
+                    continue
                 return row,col
 
 

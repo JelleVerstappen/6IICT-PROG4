@@ -7,7 +7,7 @@ You can use this file if you want to check certain properties/methods.
 Objects for all classes have already been created
 """
 
-cell = Cell()
+cell = Cell('*')
 board = Board()
 game = Game()
 

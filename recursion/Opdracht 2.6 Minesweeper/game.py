@@ -1,12 +1,33 @@
 from board import Board
 
+
 class Game():
     def __init__(self, CHAR_MINE="*", CHAR_BLANK="?", SQUARE_SIZE=9, MINE_NUMBER=9):
         self.board = Board(CHAR_MINE, CHAR_BLANK, SQUARE_SIZE, MINE_NUMBER)
 
     """ Get the choice of the user """
     def get_user_choice(self):
-        pass
+
+        while True:
+            user_input = int(input("Choose position"))
+            row = user_input[0]
+            col = user_input[1]
+            given_input = []
+            given_input = given_input.append(user_input)
+            # Input numbers too large. 
+            try:
+                int(user_input)
+            except ValueError:
+                print("Input invalid, input is no integer. Please try again")
+                continue
+            
+            if (row>=self.board.SQUARE_SIZE) or (col>=self.board.SQUARE_SIZE):
+                print(f"{user_input} is invalid, try again")
+                continue
+            elif user_input in given_input:
+                print("This coordinate has already been used")
+                continue
+            return row,col
 
     """ Make a move on the board """
     def make_move(self):

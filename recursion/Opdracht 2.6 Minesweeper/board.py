@@ -34,7 +34,7 @@ class Board():
     
     """  Clears all cells that are adjacent to a given cell until a cell neighbouring a mine is encountered. """
     def cascade(self, row, column):
-        
+        pass
 
     """ Places mines at random cell positions in the entire grid list """
     def generate_mines(self, MINE_NUMBER):
